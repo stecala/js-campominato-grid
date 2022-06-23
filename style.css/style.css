@@ -7,6 +7,21 @@
 .navbar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100vw;
-    height: 60px
+    height: 100px;
+    padding: 15px;
+}
+.title{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.logo-zone img{
+    width: 55px;
+    height: 55px;
+}
+#start-game{
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
 }
