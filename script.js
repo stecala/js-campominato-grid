@@ -1,16 +1,3 @@
-/* Esercizio di oggi: Griglia Campo Minato
-nome repo: js-campominato-grid
-Consegna
-L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
-Ogni cella ha un numero progressivo, da 1 a 100.
-Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-Bonus
-Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
-con difficoltà 1 => 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe;
-con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
-con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;*/
-
 const startGame = document.getElementById('start-game');
 const wrapper = document.querySelector('.wrapper');
 const difficulty = document.getElementById('difficulty');
@@ -33,16 +20,11 @@ startGame.addEventListener('click', function () {
         diff='hard';
         length=49;
     }
-
     drawGrid(diff,length);
 })
-
 reset.addEventListener('click', function () {
     wrapper.classList.add('visibility');
-
 })
-
-
 function drawGrid(diff,length){
     const boardContainer = document.querySelector('.board-cont');
     boardContainer.innerHTML = '';
@@ -56,10 +38,72 @@ function drawGrid(diff,length){
         boardContainer.append(newSquare);
     }
 }
-
-
 function mySquare(diff) {
     const nowSquare = document.createElement('div');
     nowSquare.classList.add(diff);
     return nowSquare;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function stars()
+
+{
+
+ let count = 20;
+
+ let scene = document.querySelector('.scene');
+
+ let i = 0;
+
+ while(i < count)
+
+ {
+
+  let star = document.createElement('i');
+
+  let x = Math.floor(Math.random() * window.innerWidth);
+
+  let duration = Math.random() * 1;
+
+  let h = Math.random() * 100;
+
+  star.style.left = x + 'px';
+
+  star.style.width = 1 +'px';
+
+  star.style.height = 50 + h + 'px';
+
+  star.style.animationDuration = duration + 's';
+
+  scene.appendChild(star);
+
+  i++
+
+ }
+
+}
+
+stars();

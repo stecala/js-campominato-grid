@@ -38,7 +38,6 @@ body{
 
 /* ! main */
 .wrapper{
-    background-color: lightseagreen;
     width: 100%;
     min-height: 80vh;
     padding: 20px;
@@ -91,5 +90,83 @@ body{
 /* ? footer */
 footer{
     height: 9vh;
-    padding: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scene {
+    position: relative;
+    background: #000000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scene i {
+    position: absolute;
+    top: -250px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animateStars linear infinite;
+}
+
+@keyframes animateStars {
+    0% {
+        transform: translateY(0);
+
+    }
+
+    100% {
+        transform: translateY(100vh);
+
+    }
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
 }
