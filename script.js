@@ -13,28 +13,59 @@ con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 
 
 const startGame = document.getElementById('start-game');
 const wrapper = document.querySelector('.wrapper');
-const boardContainer=document.querySelector('.board-cont')
+const boardContainer=document.querySelector('.board-cont');
+const difficulty=document.getElementById('difficulty');
+const reset=document.getElementById('reset');
 startGame.addEventListener('click', function() {
-    wrapper.classList.toggle('visibility');
+    console.log(difficulty.value);
+    wrapper.classList.remove('visibility');
+    if(difficulty.value==='facile'){
     boardContainer.innerHTML='';
     for(let i=0; i<100;i++){
-        const newSquare=mySquare();
+        const newSquare=mySquare('easy');
         newSquare.innerHTML=i+1;
         newSquare.addEventListener('click', function(){
             newSquare.classList.toggle('active');
             console.log(i+1);
         })
         boardContainer.append(newSquare);
+    }}
+    else if(difficulty.value==='medio'){
+        boardContainer.innerHTML='';
+        for(let i=0; i<81;i++){
+            const newSquare=mySquare('medium');
+            newSquare.innerHTML=i+1;
+            newSquare.addEventListener('click', function(){
+                newSquare.classList.toggle('active');
+                console.log(i+1);
+            })
+            boardContainer.append(newSquare);
+        }
     }
+    else{
+        boardContainer.innerHTML='';
+        for(let i=0; i<49;i++){
+            const newSquare=mySquare('hard');
+            newSquare.innerHTML=i+1;
+            newSquare.addEventListener('click', function(){
+                newSquare.classList.toggle('active');
+                console.log(i+1);
+            })
+            boardContainer.append(newSquare);
+        }
+    }
+})
+
+reset.addEventListener('click', function(){
+    wrapper.classList.add('visibility');
+
 })
 
 
 
 
-
-
-function mySquare(){
+function mySquare(diff){
     const nowSquare=document.createElement('div');
-    nowSquare.classList.add('square');
+    nowSquare.classList.add(diff);
     return nowSquare;
 }

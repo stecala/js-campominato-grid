@@ -21,10 +21,18 @@
     height: 55px;
 }
 #start-game{
-    height: 50px;
-    width: 100px;
+    height: 20px;
+    width: 150px;
+    text-align: center;
     cursor: pointer;
 }
+#reset{
+    height: 20px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+
 /* ! main */
 .wrapper{
     background-color: lightseagreen;
@@ -44,7 +52,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-.square{
+.easy{
     width: 50px;
     height: 50px;
     color: white;
@@ -53,7 +61,25 @@
     align-items: center;
     cursor: pointer;
 }
-.board-cont, .square{
+.medium{
+    width: 55.5px;
+    height: 55.5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.hard{
+    width: 71.4286px;
+    height: 71.4286px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.board-cont, .easy, .medium, .hard{
     border: 2px solid white;
 }
 .active{
