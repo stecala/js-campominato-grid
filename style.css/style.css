@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Poppins', sans-serif;
+}
 /* header */
 .navbar{
     display: flex;
@@ -47,14 +50,14 @@
     visibility: hidden;
 }
 .board-cont{
-    width: 504px;
-    height: 504px;
+    width: 654px;
+    height: 654px;
     display: flex;
     flex-wrap: wrap;
 }
 .easy{
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     color: white;
     display: flex;
     justify-content: center;
@@ -62,8 +65,8 @@
     cursor: pointer;
 }
 .medium{
-    width: 55.5px;
-    height: 55.5px;
+    width: 72.222px;
+    height: 72.222px;
     color: white;
     display: flex;
     justify-content: center;
@@ -71,8 +74,8 @@
     cursor: pointer;
 }
 .hard{
-    width: 71.4286px;
-    height: 71.4286px;
+    width: 92.857px;
+    height: 92.857px;
     color: white;
     display: flex;
     justify-content: center;

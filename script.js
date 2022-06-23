@@ -50,7 +50,7 @@ function drawGrid(diff,length){
         const newSquare = mySquare(diff);
         newSquare.innerHTML = i + 1;
         newSquare.addEventListener('click', function () {
-            newSquare.classList.toggle('active');
+            newSquare.classList.add('active');
             console.log(i + 1);
         })
         boardContainer.append(newSquare);
