@@ -10,3 +10,31 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 con difficoltà 1 => 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe;
 con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;*/
+
+const startGame = document.getElementById('start-game');
+const wrapper = document.querySelector('.wrapper');
+const boardContainer=document.querySelector('.board-cont')
+startGame.addEventListener('click', function() {
+    wrapper.classList.toggle('visibility');
+    boardContainer.innerHTML='';
+    for(let i=0; i<100;i++){
+        const newSquare=mySquare();
+        newSquare.innerHTML=i+1;
+        newSquare.addEventListener('click', function(){
+            newSquare.classList.toggle('active');
+            console.log(i+1);
+        })
+        boardContainer.append(newSquare);
+    }
+})
+
+
+
+
+
+
+function mySquare(){
+    const nowSquare=document.createElement('div');
+    nowSquare.classList.add('square');
+    return nowSquare;
+}
