@@ -24,13 +24,13 @@ body{
     height: 55px;
 }
 #start-game{
-    height: 20px;
+    height: 30px;
     width: 150px;
     text-align: center;
     cursor: pointer;
 }
 #reset{
-    height: 20px;
+    height: 30px;
     width: 150px;
     text-align: center;
     cursor: pointer;
@@ -57,30 +57,22 @@ body{
 .easy{
     width: 65px;
     height: 65px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
 }
 .medium{
     width: 72.222px;
     height: 72.222px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
 }
 .hard{
     width: 92.857px;
     height: 92.857px;
+}
+.easy , .medium, .hard{
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
+} 
 .board-cont, .easy, .medium, .hard{
     border: 2px solid white;
 }
